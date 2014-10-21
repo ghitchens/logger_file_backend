@@ -11,8 +11,8 @@ defmodule LoggerFileBackend do
 
   @default_format "$time $metadata[$level] $message\n"
 
-  def init({__MODULE__, name}) do
-    {:ok, configure(name, [])}
+  def init({__MODULE__, name}, opts \\ []) do
+    {:ok, configure(name, opts)}
   end
 
 
